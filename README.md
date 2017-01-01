@@ -1,5 +1,7 @@
 # git学习
 
+[Git教程 - 廖雪峰的官方网站](http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
+
 ## 安装后设置名称和email地址
 
 ```git
