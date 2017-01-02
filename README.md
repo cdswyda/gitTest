@@ -30,12 +30,17 @@ git init
 
 使用`git add 文件名`即可。
 
+```
+git add atom.md
+```
 
 ### 提交到远程仓库
 
 使用`commit`命令即可（省略前面的`git`了，所有的`git`命令都以`git`开始），并使用`-m "commit描述"`命令添加本次提交的描述信息。
 
-
+```
+git commit -m "add readme file"
+```
 
 
 
