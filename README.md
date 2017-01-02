@@ -34,13 +34,37 @@ git init
 git add atom.md
 ```
 
-### 提交到远程仓库
+### 进行commit
 
 使用`commit`命令即可（省略前面的`git`了，所有的`git`命令都以`git`开始），并使用`-m "commit描述"`命令添加本次提交的描述信息。
 
 ```
 git commit -m "add readme file"
 ```
+
+> 每次commit前都需要先添加修改的文件，即先使用`add`命令，再使用`commit`命令。
+
+### 查看状态
+
+使用`status`命令即可。
+
+```git:n
+git status
+# On branch master
+# Your branch is up-to-date with 'origin/master'.
+# Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   README.md
+
+# no changes added to commit (use "git add" and/or "git commit -a")
+
+```
+上面命令可以知道*README.md*文件被修改过。
+
+还可以使用`diff`命令查看修改的具体内容。
+
 
 
 
