@@ -30,6 +30,6 @@ atom插件
 
 - [minimap](https://atom.io/packages/minimap) 像sublime右侧一样的代码预览图。
 
-- [markdown-scroll-sync](https://atom.io/packages/markdown-scroll-sync) atom中自带的md支持已经基本够用了，美中不足的是不会跟随滚动，使用这个可进行同步滚动。
+- [markdown-scroll-sync](https://atom.io/packages/markdown-scroll-sync) Atom中自带的markdown支持已经基本够用了，美中不足的是不会跟随滚动，使用这个可进行同步滚动。
 
 - [Node Debugger ](https://atom.io/packages/node-debugger) 直接进行`node`调试的插件。
