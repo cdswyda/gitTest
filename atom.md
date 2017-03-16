@@ -26,7 +26,7 @@ atom插件
 
 -  [linter-jshint](https://atom.io/packages/linter-jshint) `JavaScript`代码的校验工具，使用需要在命令行执行`npm install -g jshint`安装`jshint`，并在**linter-jshint**的设置中设定其路径。 虽然需要额外配置，但是其和**linter**是一体的，提示在一起。
 
-- [jshint](https://atom.io/packages/jshint) 这个作用和上面的相同，但是不需要手动安装配置`jshint`，因为其中已经带了。有错误和警告的行会高亮显示。
+- [jshint](https://atom.io/packages/jshint) 这个作用和上面的相同，但是不需要手动安装配置`jshint`，因为其中已经带了。有错误和警告的行会高亮显示。（和上者选用其一即可）
 
 - [minimap](https://atom.io/packages/minimap) 像sublime右侧一样的代码预览图。
 

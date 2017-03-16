@@ -74,4 +74,56 @@ git status
 
 1. 远程已经建立仓库
 2. 账户或ssh已配置好  
-3.
+3. 本地仓库已经和远程关联。
+
+第一次推送时，加入 `-u`命令，后面加上 远端仓库 和 分支。 推送之后会自动讲本地的分支和远端进行关联。
+
+之后的提交直接使用`git push`即可。
+
+```git:n
+git push -u origin master
+```
+
+## 状态管理
+
+### 版本之前的切换，未推送到远端
+
+每一个commit都是一个版本，我们可以使用`git log`命令来查看版本历史，使用` git reset`命令来实现版本的切换。
+比较有用的是Git提供了一个命令`git reflog`用来记录我们所做的每一次命令。
+
+```git:n
+# 回退到上个版本
+git reset --hard HEAD^ 
+# 回退到上上个版本
+git reset --hard HEAD^^ 
+# 回退到往前第50个版本
+git reset --hard HEAD~50
+
+# 到 commit id为 3628164 的版本 id不用写全 前几位就可以，会自动查找。
+git reset --hard 3628164
+```
+
+上面的`--hard`参数位置另外两个值分别是 `soft` 和 `mixed`，其中`mixed` 为默认值。
+
+- `soft` : 仅仅重置 HEAD 到指定的commit， index 和  working copy 都不会变化。
+
+- `hard` : 重置所有，HEAD、index、working copy 都回到指定的版本，可能存在都是数据的危险，但却是唯一能回退working copy的操作。
+
+- `mixed` ：此为默认， 重置HEAD和index，working copy不受影响。
+
+> git 的管理机制是这样的：
+ - working copy 为我们看到的，直接修改的文件。
+ - index 或称为 stage 为暂存区。
+ - HEAD 可简单理解为版本库
+ - 我们修改文件，并且 git add 之后 修改内容将放入 index 
+ - 当我们执行 git commit 后 将index内的所有修改 移入版本库 ，index清空。
+
+### 撤销修改
+
+命令`git checkout -- readme.txt`意思就是，把`readme.txt`文件在工作区的修改全部撤销，这里有两种情况：
+
+一种是`readme.txt`自修改后还没有被放到暂存区，现在，撤销修改就回到和版本库一模一样的状态；
+
+一种是`readme.txt`已经添加到暂存区后，又作了修改，现在，撤销修改就回到添加到暂存区后的状态。
+
+总之，就是让这个文件回到最近一次`git commit`或`git add`时的状态。
