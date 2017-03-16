@@ -113,12 +113,19 @@ git reset --hard 3628164
 
 - `mixed` ：此为默认， 重置HEAD和index，working copy不受影响。
 
-> git 的管理机制是这样的： > - working copy 为我们看到的，直接修改的文件。 > - index 或称为 stage 为暂存区。 > -
-HEAD 可简单理解为版本库 > - 我们修改文件，并且 git add 之后 修改内容将放入 index  > - 当我们执行 git commit 后
-将index内的所有修改 移入版本库 ，index清空。 > 参考链接 > - [git reset
-soft,hard,mixed之区别深解](http://www.cnblogs.com/kidsitcn/p/4513297.html) > - [git
+> git 的管理机制是这样的： > - working copy 为我们看到的，直接修改的文件。 > - index 或称为 stage 为暂存区。 
+> -
+HEAD 可简单理解为版本库 > - 我们修改文件，并且 git add 之后 修改内容将放入 index  
+> - 当我们执行 git commit 后
+将index内的所有修改 移入版本库 ，index清空。 
+> 参考链接 
+> - [git reset
+soft,hard,mixed之区别深解](http://www.cnblogs.com/kidsitcn/p/4513297.html)
+> - [git
 工作区和暂存区](http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/0013745374151782eb658c5a5ca454eaa451661275886c6000)
-http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/0013745374151782eb658c5a5ca454eaa451661275886c6000 ### 撤销修改
+http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/0013745374151782eb658c5a5ca454eaa451661275886c6000 
+
+### 撤销修改
 
 命令`git checkout -- readme.txt`意思就是，把`readme.txt`文件在工作区的修改全部撤销，这里有两种情况：
 
