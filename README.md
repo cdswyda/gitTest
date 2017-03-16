@@ -119,8 +119,8 @@ git reset --hard 3628164
 > - HEAD 可简单理解为版本库 
 > - 我们修改文件，并且 git add 之后 修改内容将放入 index  
 > - 当我们执行 git commit 后
-将index内的所有修改 移入版本库 ，index清空。 
-> 参考链接 
+将index内的所有修改 移入版本库 ，index清空。  
+> - 参考链接 
 > - [git reset
 soft,hard,mixed之区别深解](http://www.cnblogs.com/kidsitcn/p/4513297.html)
 > - [git
