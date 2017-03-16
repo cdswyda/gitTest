@@ -112,11 +112,11 @@ git reset --hard 3628164
 - `mixed` ：此为默认， 重置HEAD和index，working copy不受影响。
 
 > git 的管理机制是这样的：
- - working copy 为我们看到的，直接修改的文件。
- - index 或称为 stage 为暂存区。
- - HEAD 可简单理解为版本库
- - 我们修改文件，并且 git add 之后 修改内容将放入 index 
- - 当我们执行 git commit 后 将index内的所有修改 移入版本库 ，index清空。
+> - working copy 为我们看到的，直接修改的文件。
+> - index 或称为 stage 为暂存区。
+> - HEAD 可简单理解为版本库
+> - 我们修改文件，并且 git add 之后 修改内容将放入 index 
+> - 当我们执行 git commit 后 将index内的所有修改 移入版本库 ，index清空。
 
 ### 撤销修改
 
