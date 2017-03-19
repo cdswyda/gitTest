@@ -136,3 +136,39 @@ soft,hard,mixed之区别深解](http://www.cnblogs.com/kidsitcn/p/4513297.html) 
 总之，就是让这个文件回到最近一次`git commit`或`git add`时的状态。
 
 > 注意不要忘记 `--` 否则，`git checkout` 命令就成了切换分支的命令。
+
+## 分支管理
+
+### 创建与合并分支
+
+- **创建** ： `git branch 分支名`
+
+- **切换** ： `git checkout 分支名`
+
+- **创建并切换** ： `git checkout -b 分支名` 加上`-b`参数即可直接创建并切换。
+
+以下是操作示例：
+
+```git:n
+cdswyda@DESKTOP-0C2VC91 MINGW64 /f/code/nodetest (master)
+$ git branch v2
+
+cdswyda@DESKTOP-0C2VC91 MINGW64 /f/code/nodetest (master)
+$ git checkout v2
+Switched to branch 'v2'
+
+cdswyda@DESKTOP-0C2VC91 MINGW64 /f/code/nodetest (v2)
+$ git checkout -b v3
+Switched to a new branch 'v3'
+
+cdswyda@DESKTOP-0C2VC91 MINGW64 /f/code/nodetest (v3)
+```
+
+直接使用``
+
+
+## 其他
+
+### 忽略指定文件，文件夹
+
+GitHub已经为我们准备了各种配置文件，可参考 [https://github.com/github/gitignore](https://github.com/github/gitignore)
