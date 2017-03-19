@@ -3,3 +3,6 @@
 
 # .gitignore 应该被提交
 !.gitignore
+
+# node_modules 无需被提交
+/node_modules/*

@@ -169,6 +169,37 @@ cdswyda@DESKTOP-0C2VC91 MINGW64 /f/code/nodetest (v3)
 
 ## 其他
 
-### 忽略指定文件，文件夹
+### 忽略某些文件，文件夹
+
+有的文件我们可能不需要提交上去，就可以在工作区的根目录下创建一个`.gitignore`文件来配置需要忽略的文件，注意：要想生效需要将此文件提交到git。
 
 GitHub已经为我们准备了各种配置文件，可参考 [https://github.com/github/gitignore](https://github.com/github/gitignore)
+
+简单规则如下：
+
+- 以斜杠`/`开头表示目录
+
+- 以星号`*`通配多个字符
+
+- 以问号`?`通配单个字符
+
+- 以方括号`[]`包含单个字符的匹配列表
+
+- 以叹号`!`表示不忽略(跟踪)匹配到的文件或目录
+
+比如我写的一个 忽略`.`开头的文件夹，`node_modules`文件夹，可以如下所示：
+
+```
+# .开头文件夹
+/.*
+
+# .gitignore 应该被提交
+!.gitignore
+
+# node_modules 无需被提交
+/node_modules/*
+```
+
+如果某个文件位于`.gitignore`中，但是我们又临时想要将其提交，只用在`add`命令时，加上`-f` 参数即可，例如：在上面如果不写`!.gitignore`来不忽略`.gitignore`文件的提交，则可以在add时，使用`git add -f .gitignore`。
+
+如果我们觉得是`.gitignore`写的有问题，需要找出来到底哪个规则写错了，可以用`git check-ignore`命令检查。
