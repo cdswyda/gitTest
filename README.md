@@ -170,6 +170,10 @@ cdswyda@DESKTOP-0C2VC91 MINGW64 /f/code/nodetest (v3)
 
 **删除分支** ： `git branch -d 分支名` 即可删除指定分支。
 
+
+
+
+
 ## 标签管理
 
 发布一个版本时，我们通常先在版本库中打一个标签（tag），这样，就唯一确定了打标签时刻的版本。将来无论什么时候，取某个标签的版本，就是把那个打标签的时刻的历史版本取出来。所以，标签也是版本库的一个快照。
@@ -210,16 +214,16 @@ cdswyda@DESKTOP-0C2VC91 MINGW64 /f/code/nodetest (v3)
     1、本地删除
 
     ```git
-    $ git tag -d v0.9
-    Deleted tag 'v0.9' (was 6224937)
+    $ git tag -d v1
+    Deleted tag 'v1' (was 7b3c1d9)
     ```
 
     2、远程删除，仍使用push命令，加入refs/tags/标签名即可。
 
     ```git
-    $ git push origin :refs/tags/v0.9
-    To git@github.com:michaelliao/learngit.git
-     - [deleted]         v0.9
+    $ git push origin :refs/tags/v1
+    TO To github.com:cdswyda/learn-node-and-mongodb.git
+     - [deleted]         v1
     ```
 
 **个人觉得，标签的作用类似于发布一个新的版本时的名称，所以发布之后一般不再修改。如需修改，使用分支是更合理的方式。**
