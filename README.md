@@ -164,8 +164,49 @@ Switched to a new branch 'v3'
 cdswyda@DESKTOP-0C2VC91 MINGW64 /f/code/nodetest (v3)
 ```
 
-直接使用``
+直接使用`git branch`命令会列出所有分支，当前分支前面会标一个`*`号。
 
+**合并分支** ： `git merge`命令用于合并指定分支到当前分支。
+
+**删除分支** ： `git branch -d 分支名` 即可删除指定分支。
+
+## 标签
+发布一个版本时，我们通常先在版本库中打一个标签（tag），这样，就唯一确定了打标签时刻的版本。将来无论什么时候，取某个标签的版本，就是把那个打标签的时刻的历史版本取出来。所以，标签也是版本库的一个快照。
+
+### 新建标签
+
+- 先切换到 要创建标签的分支上。
+
+  ```git
+  $ git checkout master
+  Switched to branch 'master'
+  ```
+
+- 敲命令`git tag 标签名>`就可以添加新标签
+ 
+    ```git
+    $ git tag v1
+    ```
+
+- 删除标签也是类似的，加上`-d`即可。
+
+    ```git
+    $ git tag -d v1
+    Deleted tag 'v1' (was 7b3c1d9)
+    ```
+
+- 默认标签是打在最新提交的commit上的。如果要给历史commit 添加标签，只用再加上commit的id即可。
+
+    ```git
+    $ git tag v1 7b3c1d94b6
+    ```
+- 标签默认是存储在本地的，如需要推送到远端，需要在提交时指明，例如：
+
+    ```git
+    $ git push origin v1
+    ```
+
+- 如果要删除已经推送到远端的标签，需要两部操作
 
 ## 其他
 
